@@ -1,4 +1,4 @@
-const readline = require('readline');   // Importamos una libreria llamada readLine
+const readline = require('readline');   // Importamos un módulo llamada readLine
 
 const rl = readline.createInterface({   // Definimos una constante llamada rl donde 
     input: process.stdin,               // creamos la interface que nos permitirá acceder a la consola
