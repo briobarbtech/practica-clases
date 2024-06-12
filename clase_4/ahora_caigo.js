@@ -33,7 +33,7 @@ const indice = Math.floor(Math.random() * palabras.length)
 console.log(`La palabra es: ${definiciones[indice]}`)
 // Mostramos las pistas
 function ocultarLetras(palabra) {
-    const letras = palabra.split('');
+    const letras = palabra.split(''); // ["f","a","n","t","a","s","m","a"]
     const letrasVisibles = new Set();
 
     // Elegir aleatoriamente cuántas letras dejar visibles (entre 2 y 3)
@@ -51,7 +51,7 @@ function ocultarLetras(palabra) {
         if (letrasVisibles.has(i)) {
             palabraOculta += letras[i];
         } else {
-            palabraOculta += '*';
+            palabraOculta += '_';
         }
     }
 
@@ -62,8 +62,8 @@ console.log(ocultarLetras(palabras[indice]))
 // definimos un bucle while para que el programa nos pregunte siempre que no acertemos
 let time = true;
 let palabraUsuario = "";
-let validator = palabraUsuario !== palabras[indice] && time // true and true
-
+let validator = (palabraUsuario !== palabras[indice]) && time // true and true
+setTimeout(()=>{time= false},30000)
 while (validator) {
     palabraUsuario = prompt("Ingrese su respuesta: ");
     palabraUsuario != palabras[indice] ? console.log("Try Again!") : console.log("Bien hecho!");
