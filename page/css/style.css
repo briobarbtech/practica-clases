@@ -61,9 +61,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
-.disabled {
-  display: none;
-}
+
 .game-status {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -71,12 +69,14 @@ main {
   font-style: normal;
   font-size: 3em;
   text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
-
+.disabled {
+  opacity: 0;
+}
 .footer {
   text-align: center;
   margin: auto;
   height: max-content;
 }
-
-
