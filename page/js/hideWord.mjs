@@ -1,3 +1,9 @@
+/**
+ * Oculta la parcialidad de una palabra con '_'
+ * 
+ * @param {string} palabra palabra a ocultar
+ * @returns {string} parcialmente oculto con '_'
+ */
 export function hideWord(palabra) {
     const letras = palabra.split(''); // ["f","a","n","t","a","s","m","a"]
     const letrasVisibles = new Set();
